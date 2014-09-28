@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/* Bourbon 4.0.2
+ * http://bourbon.io
+ * Copyright 2011–2014 thoughtbot, inc.
+ * MIT License */
+/* Neat 1.6.0
+ * http://neat.bourbon.io
+ * Copyright 2012–2014 thoughtbot, inc.
+ * MIT License */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/**
+ * Changes the display property used by other mixins called in the code block argument.
+ *
+ * @param {String} $display (block) - Display value to be used within the block. Can be `table` or `block`.
+ *
+ * @example scss
+ *   @include display(table) {
+ *    .display-table {
+ *      @include span-columns(6);
+ *     }
+ *   }
+ *
+ * @example css
+ *   // CSS
+ *   .display-table {
+ *      display: table-cell;
+ *      ...
+ *   }
+ */
+/**
+ * Changes the direction property used by other mixins called in the code block argument.
+ *
+ * @param {String} $direction (left-to-right) - Layout direction to be used within the block. Can be `left-to-right` or `right-to-left`.
+ *
+ * @example scss
+ *   @include direction(right-to-left) {
+ *    .right-to-left-block {
+ *      @include span-columns(6);
+ *     }
+ *   }
+ *
+ * @example css
+ *   // CSS
+ *   .right-to-left-block {
+ *     float: right;
+ *      ...
+ *   }
+ */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.fixedBar {
+  position: fixed;
+  display: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 20px;
+  background: #A80000;
+}
+.fixedBar .left {
+  color: #fff;
+  float: left;
+  font-size: 30px;
+}
+.fixedBar .right {
+  float: right;
+}
+.fixedBar .right .intro {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+.fixedBar .right .intro.cordova {
+  width: 25px;
+  background: url(../images/cordova.png) no-repeat center;
+  background-size: 100% 100%;
+}
+.fixedBar .right .intro.worklight {
+  background: url(../images/worklight.png) no-repeat center;
+  background-size: 80% 80%;
+}
+.fixedBar .right .intro.native {
+  background: url(../images/native.png) no-repeat center;
+  background-size: 100% 100%;
+}
+.fixedBar .right .intro.appcelerator {
+  background: url(../images/appcelerator.png) no-repeat center;
+  background-size: 100% 90%;
+}
+.fixedBar .right .intro.xamarin {
+  background: url(../images/xamarin.png) no-repeat center;
+  background-size: 80% 75%;
+}
+
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.wlIcon {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.cordovaIcon {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.nativeIcon {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.appcelerIcon {
+  width: 50px;
+  height: 50px;
+  margin-top: 8px;
+}
+
+.xamarinIcon {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+header {
+  padding: 15% 0;
+  height: 100%;
+  text-align: center;
+  background: #A80000;
+  color: #fff;
+}
+header h2 {
+  font-size: 80px;
+}
+header .intro {
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 15px;
+}
+header .intro .name {
+  position: absolute;
+  bottom: -25px;
+  text-align: center;
+  left: 0;
+  width: 100%;
+}
+header .intro.cordova {
+  width: 80px;
+  height: 90px;
+  background: url(../images/cordova.png) no-repeat center;
+  background-size: 100% 100%;
+}
+header .intro.worklight {
+  background: url(../images/worklight.png) no-repeat center;
+  background-size: 80% 80%;
+}
+header .intro.native {
+  background: url(../images/native.png) no-repeat center;
+  background-size: 100% 100%;
+}
+header .intro.appcelerator {
+  background: url(../images/appcelerator.png) no-repeat center;
+  background-size: 100% 90%;
+}
+header .intro.xamarin {
+  background: url(../images/xamarin.png) no-repeat center;
+  background-size: 80% 75%;
+}
+
+.subheading {
+  padding: 15%;
+  font-size: 60px;
+  height: 100%;
+  text-align: center;
+  background: #fff;
+  color: #A80000;
+}
+
+.content {
+  margin: 0;
+  padding: 15% 0;
+  height: 100%;
+}
+.content h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.matrix {
+  width: 900px;
+  margin: 5px auto;
+}
+.matrix .icon-thumbs-up {
+  color: #090;
+}
+.matrix .icon-thumbs-up2 {
+  color: #900;
+}
+.matrix .table-grid {
+  display: table;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+  width: 900px;
+}
+.matrix .table-grid .table-row {
+  display: table-row;
+}
+.matrix .table-grid .table-row.table-header .table-cell {
+  padding: 5px 10px;
+  border-top: 0;
+}
+.matrix .table-grid .table-row .table-cell {
+  display: table-cell;
+  width: 100px;
+  border: 1px solid #aaa;
+  border-left: 0;
+  border-bottom: 0;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.matrix .table-grid .table-row .table-cell:first-child {
+  text-align: left;
+  width: 400px;
+}
+.matrix .table-grid .table-row .table-cell:last-child {
+  border-right: 0;
+}
+.matrix .table-grid .table-row .table-cell .pict {
+  width: 100px;
+  height: 45px;
+}
+.matrix .table-grid .table-row .table-cell .pict.cordova {
+  width: 100px;
+  height: 45px;
+  background: url(../images/cordova.png) no-repeat center;
+  background-size: 40px 45px;
+}
+.matrix .table-grid .table-row .table-cell .pict.worklight {
+  background: url(../images/worklight.png) no-repeat center;
+  background-size: 40px 40px;
+}
+.matrix .table-grid .table-row .table-cell .pict.native {
+  background: url(../images/native.png) no-repeat center;
+  background-size: 40px 40px;
+}
+.matrix .table-grid .table-row .table-cell .pict.appcelerator {
+  background: url(../images/appcelerator.png) no-repeat center;
+  background-size: 40px 40px;
+}
+.matrix .table-grid .table-row .table-cell .pict.xamarin {
+  background: url(../images/xamarin.png) no-repeat center;
+  background-size: 40px 40px;
+}
+
+.likeIcon {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 40px;
+  height: 40px;
+}
+
+.iterate {
+  visibility: hidden;
+}
+
+.swift {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: url(../images/swift.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.igniteLogo {
+  width: 104px;
+  height: 48px;
+  background: url(../images/ignite_logo.png) center no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  left: 2px;
+  bottom: 5px;
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
