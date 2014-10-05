@@ -324,4 +324,29 @@ header .intro.xamarin {
   display: none;
 }
 
+.doAnimate{
+    -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
+    transition: 2s;
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+}
+.doAnimateBack{
+    -webkit-transition: 1s; /* For Safari 3.1 to 6.0 */
+    transition: 1s;
+    -webkit-transform: scale(1); /* Chrome, Safari, Opera */
+    transform: scale(1);
+}
+
+.videoContent{
+    padding-top: 100px;
+}
+.videoContent video{
+    width:900px;
+    height:500px;
+    margin: 0 auto;
+    display: block;
+}
+.matrix .icon-thumbs-up.yellow{
+    color:rgb(157, 238, 55);
+}
 /*# sourceMappingURL=styles.css.map */

@@ -5,6 +5,8 @@ $(document).ready(function () {
     var itemsTraversed = 0;
     var liHeight = 20;
     
+    var animateCount = 0;
+    
     /* Function to scroll */
     function scrollTop(scrollHeight){
         $(container).animate({top:scrollHeight});
@@ -74,6 +76,13 @@ $(document).ready(function () {
         }
         if(e.keyCode == 83){      //Swift Code
             showShift();
+        }
+        
+        if(e.keyCode == 90){
+            $("#animate"+animateCount).removeClass("doAnimate");
+            $("#animate"+animateCount).addClass("doAnimateBack");
+            animateCount++;
+            $("#animate"+animateCount).addClass("doAnimate");
         }
     });
 
